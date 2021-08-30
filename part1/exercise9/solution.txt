@@ -1,0 +1,1 @@
+docker run -itd -v /home/mikko/courses/devops-with-docker-2021/part1/exercise9/text.log:/usr/src/app/text.log devopsdockeruh/simple-web-service
