@@ -1,0 +1,2 @@
+docker pull devopsdockeruh/simple-web-service:alpine
+docker run -d --rm -p 8080:8080 fd312 server
