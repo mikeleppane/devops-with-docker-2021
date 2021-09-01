@@ -18,4 +18,4 @@ The following apis can be used:
 
 
 ### Links
-[Link to Github page](https://github.com/mikeleppane/devops-with-docker-2021/tree/main/part1/exercise15)
+[Link to Docker Hub page](https://hub.docker.com/repository/docker/mikkolep/devops-with-docker-part1-ex15)
