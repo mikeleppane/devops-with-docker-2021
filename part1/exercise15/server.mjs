@@ -21,7 +21,7 @@ app.get('/todos', (req, res) => {
 })
 
 app.post('/todo', (req, res) => {
-    const newTodo = {complete: false, id: Date.now(), text: req.body.text}
+    const newTodo = {complete: false, id: Date.now(), todo: req.query.todo}
     db.todos.push(newTodo)
 
     res.status(201).json({data: newTodo})
@@ -33,17 +33,26 @@ app.get('/todo/:id', (req, res) => {
     res.json({data: todo})
 })
 
-app.get('/todo/delete/:id', (req, res) => {
+app.delete('/todo/:id', (req, res) => {
     db.todos = db.todos.filter(t => t.id !== +req.params.id)
     res.json({data: `Todo (${req.params.id}) removed`})
 })
 
-app.get('/todo/complete/:id', (req, res) => {
+app.post('/todo/update', (req, res) => {
     const todo = db.todos.find(t => {
-        if (t.id === +req.params.id) {
-            t.complete = true
+        if (t.id === +req.query.id) {
+            if (typeof req.query.complete !== 'undefined') {
+                if (req.query.complete === "true" || req.query.complete === true) {
+                    t.complete = true
+                } else {
+                    t.complete = false
+                }
+            }
+            if (typeof req.query.todo !== 'undefined') {
+                t.todo = req.query.todo
+            }
+            return t
         }
-        return t
     })
     res.json({data: todo})
 })
