@@ -9,10 +9,10 @@ In addition, exercise root contains Dockerfile which executes this inside a cont
 
 ### Used Commands
 1. Build 
-    - docker build . -t docker_pub
+    - `` docker build . -t docker_pub``
 2. Execute
-    - docker run -it -v /var/run/docker.sock:/var/run/docker.sock --env DOCKER_USER=$DOCKER_USER --env DOCKER_PASS=$DOCKER_PASS docker_pub
+    - ``docker run -it -v /var/run/docker.sock:/var/run/docker.sock --env DOCKER_USER=$DOCKER_USER --env DOCKER_PASS=$DOCKER_PASS docker_pub``
    
-Note: DOCKER_USER and DOCKER_PASS needs to be set before trying to run the container; export DOCKER_USER=username, 
-export DOCKER_PASS=my_password
+Note: DOCKER_USER and DOCKER_PASS needs to be set before trying to run the container; ``export DOCKER_USER=username && 
+export DOCKER_PASS=my_password ``
 
