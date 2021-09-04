@@ -1,0 +1,10 @@
+appuser@cd419f5648b8:/$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+appuser        1  0.0  0.5 904112 48072 ?        Ssl  10:43   0:00 node /usr/local/bin/serve -s -l 5000 build
+appuser       89  0.2  0.0  18204  3264 pts/0    Ss   10:52   0:00 bash
+appuser       99  0.0  0.0  36640  2788 pts/0    R+   10:52   0:00 ps aux
+
+==========
+
+appuser@cd419f5648b8:/$ id    
+uid=999(appuser) gid=999(appuser) groups=999(appuser)

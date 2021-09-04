@@ -1,0 +1,13 @@
+appuser@2aa449d035ee:/go/src/app$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+appuser        1  0.0  0.0   2420   584 ?        Ss   10:43   0:00 /bin/sh -c ./server
+appuser        9  0.0  0.1 1234768 12228 ?       Sl   10:43   0:00 ./server
+appuser       68  0.3  0.0   4100  3372 pts/0    Ss   10:51   0:00 bash
+appuser       76  0.0  0.0   6700  3020 pts/0    R+   10:51   0:00 ps aux
+
+===========
+
+appuser@2aa449d035ee:/go/src/app$ id    
+uid=999(appuser) gid=999(appuser) groups=999(appuser)
+
+
