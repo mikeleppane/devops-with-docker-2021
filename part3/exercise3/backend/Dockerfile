@@ -4,13 +4,15 @@ WORKDIR /go/src/app
 
 RUN groupadd -r appuser && useradd -r -g appuser -m appuser
 
-COPY . .
+COPY --chown=appuser:appuser . .
 
-RUN go build .
+RUN go build -o server .
 
 EXPOSE 8080
 
 ENV REQUEST_ORIGIN=http://localhost:5000
+
+RUN chown appuser:appuser server
 
 USER appuser
 
