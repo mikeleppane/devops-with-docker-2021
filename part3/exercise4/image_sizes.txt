@@ -1,0 +1,7 @@
+Before:
+backend 769 MB
+frontend 515 MB
+===============
+After:
+backend 211 MB
+frontend 407 MB
